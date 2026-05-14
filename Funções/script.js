@@ -108,5 +108,27 @@ const testeString = (dado) => {
 let dados;
 dados = 'carro';
 dados.toUpperCase;
-
 testeString("Yago");
+
+console.log(10);
+console.log(String(10))
+console.log("Moreira")
+console.log(String("Moreira"))
+
+const triplo = valor => {
+    return valor * 3
+};
+
+const aplicar = (f, valor) => {
+    const resultado = f(valor);
+    console.log(resultado);
+}
+
+aplicar(triplo, 3);
+
+const alterarParaLowerCase = (f, dado) => {
+    const result = f(dado.toLowerCase());
+    return result;
+}
+
+alterarParaLowerCase(testeString, "Café")
