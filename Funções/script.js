@@ -53,21 +53,60 @@ console.log("===================================================================
 function isTruthy(valor) {
     return !!valor;
 }
-
-console.log(isTruthy(' '));
+console.log(isTruthy(''));
 
 // Crie uma função matemática que retorne o perímetro de um quadrado
 // lembrando: perímetro é a soma dos quatro lados do quadrado
+function perimetroQuadrado(valor) {
+    return valor * 4;
+}
+console.log(perimetroQuadrado(5))
 
 // Crie uma função que retorne o seu nome completo
 // ela deve possuir os parâmetros: nome e sobrenome
 
 // Crie uma função que verifica se um número é par
+function verificaSeEPar(valor) {
+    if(valor % 2 === 0) {
+        return "O valor informado É par";
+    } else {
+        return "O valor informado NÃO é par";
+    }
+}
+console.log(verificaSeEPar(16));
 
 // Crie uma função que retorne o tipo de
 // dado do argumento passado nela (typeof)
+function usandoTypeOf(dado) {
+    return typeof(dado);
+}
+console.log(usandoTypeOf("Teste"));
 
 // addEventListener é uma função nativa do JavaScript
 // o primeiro parâmetro é o evento que ocorre e o segundo o Callback
 // utilize essa função para mostrar no console o seu nome completo
 // quando o evento 'scroll' ocorrer.
+
+let dobro = num => num * 2;
+console.log(dobro(5));
+console.log(dobro(10));
+
+const nome = "Qualquer Coisa";
+const minusculo = nome.toLowerCase();
+console.log(minusculo);
+const maiusculo = nome.toUpperCase();
+console.log(maiusculo);
+
+const testeString = (dado) => {
+    if(typeof(dado) === 'string') {
+        console.log(dado.toLowerCase());
+    } else {
+        console.log("Números e caracteres não podem sofrer alterações com Minusculo ou Maiusculo...");
+    }
+}
+
+let dados;
+dados = 'carro';
+dados.toUpperCase;
+
+testeString("Yago");
