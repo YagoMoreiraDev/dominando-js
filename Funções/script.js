@@ -132,3 +132,64 @@ const alterarParaLowerCase = (f, dado) => {
 }
 
 alterarParaLowerCase(testeString, "Café")
+
+//Mais exemplos de função dentro de função
+const square = (valor) => {
+    return valor * valor;
+}
+console.log(square(5));
+
+//Eu quero saber a soma de dois valores de resultados de uma raiz quadrada;
+const somaFinal = (a, b) => {
+    let valor1 = square(a);
+    let valor2 = square(b);
+
+    return valor1 + valor2;
+}
+console.log(somaFinal(10, 4));
+
+//Exercício 2 — Verificar idade
+function verificarIdade(idade) {
+    if(idade >= 18) {
+        console.log("Maior de idade...");
+    } else {
+        console.log("Menor de idade...");
+    }
+}
+console.log(verificarIdade(17));
+
+//Exercício 3 — Texto maiúsculo
+function tornarMaiusculo(dado) {
+    if(typeof dado === "string") {
+        return dado.toUpperCase();
+    } else {
+        return "Valor invalido";
+    }
+}
+console.log(tornarMaiusculo(1));
+
+//Exercício 4 — Número par
+const truthyOrFalse = (num) => {
+    return num % 2 === 0 ? true : false;
+}
+console.log(truthyOrFalse(1156));
+
+//Funções chamando funções
+const dobro2 = (valor) => {
+    return valor * 2;
+}
+
+const triploDoDbro = (valor) => {
+    let resultDoDobro = dobro2(valor);
+    return resultDoDobro * 3;
+}
+console.log(triploDoDbro(2));
+
+function gerarNome(nome) {
+    return nome;
+}
+
+function mostrarSaudacao(nome) {
+    return "Olá " + gerarNome(nome);
+}
+console.log(mostrarSaudacao("Yago Moreira"));
